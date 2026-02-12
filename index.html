@@ -6,10 +6,11 @@
 <title>Killer Pool</title>
 
 <style>
-   :root{
-    --felt1:#0b3d2e;
-    --felt2:#062b21;
-    --chalk:#eaf7ff;
+  /* ✅ Brighter theme */
+  :root{
+    --felt1:#1f8a6a;     /* brighter top */
+    --felt2:#0f5f4a;     /* brighter bottom */
+    --chalk:#f7fcff;     /* brighter text */
     --btnText:#0b0b0b;
   }
 
@@ -20,11 +21,14 @@
     min-height:100vh;
     display:flex;
     justify-content:center;
+
+    /* ✅ Brighter, less “dark vignette” */
     background:
-      radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,.08), transparent 55%),
-      radial-gradient(900px 700px at 50% 110%, rgba(0,0,0,.55), transparent 60%),
-      repeating-radial-gradient(circle at 30% 20%, rgba(255,255,255,.025) 0 2px, transparent 2px 8px),
+      radial-gradient(1200px 650px at 50% -10%, rgba(255,255,255,.22), transparent 58%),
+      radial-gradient(900px 700px at 50% 115%, rgba(0,0,0,.28), transparent 62%),
+      repeating-radial-gradient(circle at 30% 20%, rgba(255,255,255,.045) 0 2px, transparent 2px 9px),
       linear-gradient(180deg, var(--felt1), var(--felt2));
+
     color: var(--chalk);
     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     padding: 18px 12px 28px;
@@ -40,17 +44,20 @@
     margin: 10px 0 14px;
     font-weight: 900;
     letter-spacing: .5px;
-    text-shadow: 0 8px 30px rgba(0,0,0,.55);
+    text-shadow: 0 8px 30px rgba(0,0,0,.45);
   }
 
   .rail{
     border-radius: 18px;
     padding: 14px 12px 18px;
+
+    /* ✅ Lighter panel */
     background:
-      linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
-      radial-gradient(900px 240px at 50% 0%, rgba(0,0,0,.45), transparent 70%);
-    border: 1px solid rgba(255,255,255,.10);
-    box-shadow: 0 18px 60px rgba(0,0,0,.55);
+      linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06)),
+      radial-gradient(900px 240px at 50% 0%, rgba(0,0,0,.22), transparent 72%);
+
+    border: 1px solid rgba(255,255,255,.14);
+    box-shadow: 0 18px 60px rgba(0,0,0,.45);
     backdrop-filter: blur(6px);
   }
 
@@ -66,13 +73,14 @@
   }
 
   input{
-    background: rgba(255,255,255,.10);
+    /* ✅ Brighter inputs */
+    background: rgba(255,255,255,.16);
     color: var(--chalk);
-    border: 1px solid rgba(255,255,255,.14);
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,.18);
+    border: 1px solid rgba(255,255,255,.22);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.10);
     text-align:center;
   }
-  input::placeholder{ color: rgba(234,247,255,.65); }
+  input::placeholder{ color: rgba(247,252,255,.72); }
 
   button{
     font-weight: 900;
@@ -82,7 +90,7 @@
     transition: transform .08s ease, filter .15s ease;
   }
   button:active{ transform: translateY(1px) scale(.99); }
-  button:hover{ filter: brightness(1.05); }
+  button:hover{ filter: brightness(1.06); }
 
   .secondary{
     background: linear-gradient(180deg, rgba(61,152,219,1), rgba(40,115,175,1));
@@ -101,20 +109,20 @@
     color: var(--btnText);
   }
   .black{
-    background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(0,0,0,.70));
-    border: 1px solid rgba(255,255,255,.18);
+    background: linear-gradient(180deg, rgba(255,255,255,.22), rgba(0,0,0,.65));
+    border: 1px solid rgba(255,255,255,.22);
     color: white;
   }
   .whiteball{
-    background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(215,215,215,.92));
+    background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(225,225,225,.95));
     color: #111;
-    border: 1px solid rgba(255,255,255,.35);
+    border: 1px solid rgba(255,255,255,.45);
   }
 
   #results h2{
     margin: 14px 0 8px;
     font-size: 18px;
-    opacity: .9;
+    opacity: .95;
   }
   .dealRow{
     margin: 10px auto 0;
@@ -122,8 +130,11 @@
     max-width: 420px;
     padding: 10px 12px;
     border-radius: 14px;
-    background: rgba(0,0,0,.20);
-    border: 1px solid rgba(255,255,255,.10);
+
+    /* ✅ Brighter rows */
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.14);
+
     display:flex;
     justify-content: space-between;
     align-items:center;
@@ -141,8 +152,8 @@
     font-weight: 900;
     padding: 6px 12px;
     border-radius: 12px;
-    background: rgba(255,255,255,.10);
-    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.18);
     min-width: 54px;
   }
 
@@ -156,7 +167,7 @@
     font-weight: 950;
     letter-spacing: .5px;
     margin: 8px 0 10px;
-    text-shadow: 0 14px 40px rgba(0,0,0,.65);
+    text-shadow: 0 14px 40px rgba(0,0,0,.55);
   }
 
   .cardWrap{
@@ -172,8 +183,8 @@
     position: relative;
     transform-style: preserve-3d;
     box-shadow:
-      0 18px 55px rgba(0,0,0,.55),
-      0 0 0 1px rgba(255,255,255,.10);
+      0 18px 55px rgba(0,0,0,.45),
+      0 0 0 1px rgba(255,255,255,.12);
   }
 
   .cardFace, .cardBack{
@@ -187,10 +198,10 @@
   .cardBack{
     transform: rotateY(0deg);
     background:
-      radial-gradient(260px 220px at 30% 20%, rgba(255,255,255,.18), transparent 60%),
-      repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 8px, rgba(0,0,0,.10) 8px 16px),
-      linear-gradient(180deg, rgba(16,16,16,.9), rgba(0,0,0,.9));
-    border: 1px solid rgba(255,255,255,.14);
+      radial-gradient(260px 220px at 30% 20%, rgba(255,255,255,.22), transparent 60%),
+      repeating-linear-gradient(45deg, rgba(255,255,255,.10) 0 8px, rgba(0,0,0,.08) 8px 16px),
+      linear-gradient(180deg, rgba(24,24,24,.88), rgba(0,0,0,.88));
+    border: 1px solid rgba(255,255,255,.16);
   }
 
   .cardBack::after{
@@ -200,17 +211,17 @@
     display:grid;
     place-items:center;
     font-size: 64px;
-    opacity: .85;
-    text-shadow: 0 10px 30px rgba(0,0,0,.6);
+    opacity: .9;
+    text-shadow: 0 10px 30px rgba(0,0,0,.55);
   }
 
   .cardFace{
     transform: rotateY(180deg);
     background:
-      radial-gradient(400px 240px at 35% 0%, rgba(255,255,255,.24), transparent 60%),
-      linear-gradient(180deg, rgba(255,255,255,.92), rgba(245,245,245,.88));
+      radial-gradient(400px 240px at 35% 0%, rgba(255,255,255,.28), transparent 60%),
+      linear-gradient(180deg, rgba(255,255,255,.94), rgba(245,245,245,.90));
     color:#111;
-    border: 1px solid rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.82);
   }
 
   .cardInner{
@@ -218,7 +229,7 @@
     inset: 14px;
     border-radius: 14px;
     border: 2px solid rgba(0,0,0,.08);
-    background: rgba(255,255,255,.50);
+    background: rgba(255,255,255,.55);
     display:flex;
     flex-direction:column;
     justify-content:space-between;
@@ -245,17 +256,17 @@
     font-weight: 950;
     font-size: 84px;
     letter-spacing: 1px;
-    text-shadow: 0 10px 26px rgba(0,0,0,.20);
+    text-shadow: 0 10px 26px rgba(0,0,0,.18);
   }
 
   .cardShine{
     position:absolute;
     inset:-40px;
-    background: radial-gradient(260px 240px at var(--sx, 30%) var(--sy, 20%), rgba(255,255,255,.45), transparent 60%);
+    background: radial-gradient(260px 240px at var(--sx, 30%) var(--sy, 20%), rgba(255,255,255,.50), transparent 60%);
     transform: rotate(10deg);
     pointer-events:none;
     mix-blend-mode: screen;
-    opacity: .45;
+    opacity: .50;
   }
 
   .flipIn{ animation: flipIn .65s cubic-bezier(.22,.8,.2,1) forwards; }
@@ -274,19 +285,25 @@
     padding: 10px 12px;
     border-radius: 999px;
     font-size: 16px;
-    background: rgba(0,0,0,.35);
+
+    /* ✅ Slightly lighter */
+    background: rgba(0,0,0,.28);
     color: #fff;
-    border: 1px solid rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.18);
+
     z-index: 1000;
     display: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,.45);
+    box-shadow: 0 10px 30px rgba(0,0,0,.40);
   }
 
   #refOverlay{
     display:none;
     position:fixed;
     inset:0;
-    background: rgba(0,0,0,.92);
+
+    /* ✅ Less heavy */
+    background: rgba(0,0,0,.82);
+
     color:#fff;
     padding: 18px;
     z-index:2000;
@@ -306,19 +323,19 @@
     line-height: 1.7;
     padding: 12px 14px;
     border-radius: 16px;
-    background: rgba(255,255,255,.06);
-    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.14);
   }
   .pill{
     display:inline-block;
     padding: 3px 10px;
     border-radius: 999px;
-    background: rgba(255,255,255,.08);
-    border: 1px solid rgba(255,255,255,.10);
+    background: rgba(255,255,255,.10);
+    border: 1px solid rgba(255,255,255,.12);
     margin-left: 8px;
     font-size: 14px;
   }
-  .muted{ opacity:.75; }
+  .muted{ opacity:.78; }
 
   .btnRow{
     display:flex;
@@ -339,7 +356,9 @@
     inset:0;
     z-index:3000;
     pointer-events:none;
-    background: radial-gradient(900px 500px at 50% 40%, rgba(255,255,255,.18), rgba(0,0,0,.85));
+
+    /* ✅ Brighter flash */
+    background: radial-gradient(900px 520px at 50% 40%, rgba(255,255,255,.26), rgba(0,0,0,.72));
   }
   #flashText{
     position:absolute;
@@ -352,8 +371,8 @@
     font-size: clamp(48px, 10vw, 96px);
     color: #fff;
     text-shadow:
-      0 18px 60px rgba(0,0,0,.8),
-      0 0 18px rgba(255,255,255,.35);
+      0 18px 60px rgba(0,0,0,.75),
+      0 0 18px rgba(255,255,255,.40);
     transform: scale(.85);
     opacity: 0;
   }
@@ -372,7 +391,10 @@
     position:fixed;
     inset:0;
     z-index:3100;
-    background: rgba(0,0,0,.86);
+
+    /* ✅ Less dark */
+    background: rgba(0,0,0,.78);
+
     display:grid;
     place-items:center;
     pointer-events:none;
@@ -383,7 +405,7 @@
     text-transform: uppercase;
     font-size: clamp(44px, 9vw, 92px);
     color: #fff;
-    text-shadow: 0 18px 60px rgba(0,0,0,.8);
+    text-shadow: 0 18px 60px rgba(0,0,0,.75);
     transform: scale(.92);
     opacity: 0;
   }
@@ -577,10 +599,8 @@
     if (transitioning) return;
     transitioning = true;
 
-    // Show flash (skip if first? We'll still show but shorter feel)
     showNextPlayerFlash(isFirst ? 450 : 650);
 
-    // After flash starts, pick and reveal
     setTimeout(() => {
       pickShooter();
       transitioning = false;
@@ -599,7 +619,7 @@
     const overlay = document.getElementById("flashOverlay");
     overlay.style.display = "block";
     overlay.classList.remove("flashOn");
-    void overlay.offsetWidth; // reflow
+    void overlay.offsetWidth;
     overlay.classList.add("flashOn");
 
     setTimeout(() => {
@@ -636,7 +656,6 @@
     }
 
     if (type === "pot") {
-      // no change
       transitionToNextShooter(false);
       return;
     }
@@ -648,19 +667,16 @@
     }
 
     if (type === "white") {
-      // White ball potted: big message + lose a life (same as miss)
       showHahaUnlucky();
       p.lives -= 1;
       if (p.lives <= 0) {
         activePlayers = activePlayers.filter(i => i !== currentIdx);
       }
-      // let the message land before next player
       setTimeout(() => transitionToNextShooter(false), 350);
       return;
     }
   }
 
-  // --- Card UI ---
   function setCardValue(v){
     document.getElementById("cornerTop").textContent = v;
     document.getElementById("centerVal").textContent = v;
@@ -683,7 +699,6 @@
     shine.style.setProperty("--sy", y + "%");
   });
 
-  // --- Ref Mode (Option 2) ---
   function toggleRef() {
     const overlay = document.getElementById("refOverlay");
     const open = overlay.style.display !== "block";
@@ -715,7 +730,6 @@
       .replaceAll("'","&#039;");
   }
 
-  // Start with two inputs
   addPlayer();
   addPlayer();
 </script>
